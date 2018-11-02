@@ -33,15 +33,15 @@ Pizza.prototype.determinePrice = function() {
   }
   for (var i = 0; i < currentToppings.length; i++) {
     if (currentToppings[i] === "pepperoni") {
-      currentToppings[i] = "<li>" + "pepperoni"
+      currentToppings[i] = "<li>" + "Pepperoni"
       newPrice += 1.50
     }
     else if (currentToppings[i] === "onion") {
-      currentToppings[i] = "<li>" + "onion"
+      currentToppings[i] = "<li>" + "Onion"
       newPrice += 1.25
     }
     else if (currentToppings[i] === "mushroom") {
-      currentToppings[i] = "<li>" + "mushroom"
+      currentToppings[i] = "<li>" + "Mushroom"
       newPrice += 2.00
     }
   }
@@ -54,15 +54,15 @@ var newPizza = new Pizza()
 $(document).ready(function() {
   $("#userPizza").submit(function(event) {
     event.preventDefault();
+
     newPizza.addSize($("input[name=size]:checked").val());
     newPizza.addToppings($("input[id='pepperoni']:checked").val() + " " + $("input[id='onion']:checked").val() + " " + $("input[id='mushroom']:checked").val());
-    console.log(newPizza);
-    console.log(newPizza.size);
-    console.log(newPizza.determinePrice());
+
     $("#userSize").text(newPizza.size);
     $("#userTotal").text(newPizza.determinePrice());
     $("ul#userToppings").prepend(newPizza.toppings[0].join(" ") + "</li>");
 
-    $(".output").show();
+    $(".output").fadeIn(500, "linear");
+    $("#userPizza").hide();
   })
 });

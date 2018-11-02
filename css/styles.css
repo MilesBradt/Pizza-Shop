@@ -30,6 +30,15 @@ fieldset {
 
 .output {
   display: none;
+  width: 300px;
+  margin-top: 15px;
+  font-size: 24px;
+  border: 2px solid black;
+  color: #080D05;
+  background-color: #D97236;
+}
+#orderLegend {
+  text-align: center;
 }
 
 button {

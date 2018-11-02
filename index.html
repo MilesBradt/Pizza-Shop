@@ -9,23 +9,35 @@
     <title>Pizza Shop</title>
   </head>
   <body>
-    <form id="userToppings">
+    <form id="userPizza">
       <fieldset>
-        <legend>Choose your toppings:</legend>
-        <div>
-          <input type="checkbox" id="pepperoni" value="pepperoni">
-          <label for="pepperoni">Pepperoni</label>
-        </div>
-        <div>
-          <input type="checkbox" id="onion" value="onion">
-          <label for="onion">Onion</label>
-        </div>
-        <div>
-          <input type="checkbox" id="mushroom" value="mushroom">
-          <label for="mushroom">Mushroom</label>
-        </div>
-      </fieldset>
-      <button class="btn okay" type="submit" name="button">Okay</button>
+      <legend>Select a size</legend>
+      <div>
+        <input type="radio" id="medium" name="size" value="medium" checked />
+        <label for="medium">Medium</label>
+      </div>
+      <div>
+        <input type="radio" id="large" name="size" value="large"/>
+        <label for="large">Large</label>
+      </div>
+     </fieldset>
+    <br>
+    <fieldset>
+      <legend>Choose your toppings:</legend>
+      <div>
+        <input type="checkbox" id="pepperoni" value="pepperoni">
+        <label for="pepperoni">Pepperoni</label>
+      </div>
+      <div>
+        <input type="checkbox" id="onion" value="onion">
+        <label for="onion">Onion</label>
+      </div>
+      <div>
+        <input type="checkbox" id="mushroom" value="mushroom">
+        <label for="mushroom">Mushroom</label>
+      </div>
+    </fieldset>
+    <button class="btn okay" type="submit" name="button">Okay</button>
     </form>
   </body>
 </html>

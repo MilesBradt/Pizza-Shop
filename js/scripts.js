@@ -48,8 +48,9 @@ var newCustomer = new Customer();
 var newPizza = new Pizza();
 
 $(document).ready(function() {
-  $("#userToppings").submit(function(event) {
+  $("#userPizza").submit(function(event) {
     event.preventDefault();
+    newPizza.addSize($("input[name=size]:checked").val());
     newPizza.addToppings($("input[id='pepperoni']:checked").val() + " " + $("input[id='onion']:checked").val() + " " + $("input[id='mushroom']:checked").val());
     console.log(newPizza);
     console.log(newPizza.determinePrice());

@@ -56,7 +56,8 @@ $(document).ready(function() {
     newPizza.addToppings($("input[id='pepperoni']:checked").val() + " " + $("input[id='onion']:checked").val() + " " + $("input[id='mushroom']:checked").val());
     console.log(newPizza);
     console.log(newPizza.size);
-    console.log(newPizza.toppings[0]);
     console.log(newPizza.determinePrice());
+    $("#total").text(newPizza.determinePrice());
+    $("#toppingsTest").text(newPizza.toppings[0].join(" "));
   })
 });

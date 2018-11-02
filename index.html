@@ -1,61 +1,61 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
-    <script src="js/jquery-3.3.1.js"></script>
-    <script src="js/scripts.js"></script>
-    <title>Pizza Shop</title>
-  </head>
-  <body>
-    <div class="jumbotron">
-      <h1 id="header">Tony Youknowme Pizza</h1>
-      <img id="pizzaImg" src="img/pizza.jpg">
-    </div>
-    <div class="container">
-      <form id="userPizza">
-        <h2>Place an order?</h2>
-        <fieldset>
+<head>
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+  <script src="js/jquery-3.3.1.js"></script>
+  <script src="js/scripts.js"></script>
+  <title>Pizza Shop</title>
+</head>
+<body>
+  <div class="jumbotron">
+    <h1 id="header">Tony Youknowme Pizza</h1>
+    <img id="pizzaImg" src="img/pizza.jpg">
+  </div>
+  <div class="container">
+    <form id="userPizza">
+      <h2>Place an order?</h2>
+      <fieldset>
         <legend>Select size:</legend>
         <div class="input">
           <input type="radio" id="medium" name="size" value="Medium" checked />
-          <label for="medium">Medium</label>
+          <label for="medium">Medium ($7.99)</label>
         </div>
         <div class="input">
           <input type="radio" id="large" name="size" value="Large"/>
-          <label for="large">Large</label>
+          <label for="large">Large ($10.99)</label>
         </div>
-       </fieldset>
+      </fieldset>
       <br>
       <fieldset>
         <legend>Choose your toppings:</legend>
         <div class="input">
           <input type="checkbox" id="pepperoni" value="pepperoni" />
-          <label for="pepperoni">Pepperoni</label>
+          <label for="pepperoni">Pepperoni (add $1.50)</label>
         </div>
         <div class="input">
           <input type="checkbox" id="onion" value="onion" />
-          <label for="onion">Onion</label>
+          <label for="onion">Onion (add $1.25)</label>
         </div>
         <div class="input">
           <input type="checkbox" id="mushroom" value="mushroom" />
-          <label for="mushroom">Mushroom</label>
+          <label for="mushroom">Mushroom (add $2.00)</label>
         </div>
       </fieldset>
       <button class="btn okay" type="submit" name="button">Confirm Order</button>
-      </form>
-      <fieldset class="output">
-        <legend id="orderLegend">Your Final Order:</legend>
-        <div class="input">
-
+    </form>
+    <fieldset class="output">
+      <legend id="orderLegend">Your Final Order:</legend>
+      <div class="input">
         <p>Size:  <span id="userSize"></span></p>
         <p>Toppings:</p>
         <ul id="userToppings">
         </ul>
         <p>Your total is $<span id="userTotal"></span></p>
       </div>
-
+    </fieldset>
+    <button id="redo" class="btn" type="button" name="button">Re-do Order</button>
     </div>
   </body>
-</html>
+  </html>

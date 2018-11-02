@@ -37,6 +37,7 @@ fieldset {
   color: #080D05;
   background-color: #D97236;
 }
+
 #orderLegend {
   text-align: center;
 }
@@ -57,4 +58,8 @@ button {
   text-align: center;
   color: #F2C3A7;
   font-family: 'Playfair Display', serif
+}
+
+#redo {
+  display: none;
 }

@@ -27,7 +27,7 @@ Pizza.prototype.determinePrice = function() {
   var newPrice = this.price
   var currentToppings = this.toppings[0]
   if (this.size === "Medium") {
-    newPrice += 6.99
+    newPrice += 7.99
   } else if (this.size === "Large") {
     newPrice += 10.99
   }
@@ -63,6 +63,12 @@ $(document).ready(function() {
     $("ul#userToppings").prepend(newPizza.toppings[0].join(" ") + "</li>");
 
     $(".output").fadeIn(500, "linear");
+    $("#redo").fadeIn(500, "linear");
     $("#userPizza").hide();
-  })
+  });
+
+  $("#redo").click(function() {
+    document.location.reload()
+  });
+
 });

@@ -56,7 +56,7 @@
         <p>Toppings:</p>
         <ul id="userToppings">
         </ul>
-        <p>Your total is $<span id="userTotal"></span></p>
+        <p>Total: $<span id="userTotal"></span></p>
       </div>
     </fieldset>
     <button id="redo" class="btn" type="button" name="button">Re-do Order</button>
@@ -64,19 +64,23 @@
     <br>
     <br>
     <br>
-    <fieldset class="output">
-    <form class="userInfo">
+    <fieldset class="output customerInfo">
+    <form id="userInfo">
       <div class="form-group">
         <label id="name" for="sentence">Name: </label>
         <input id="userName" class="form-control" type="text">
       </div>
       <div class="form-group">
         <label id="name" for="sentence">Phone Number: </label>
-        <input id="userName" class="form-control" type="text">
+        <input id="userNumber" class="form-control" type="text">
       </div>
     </fieldset>
       <button id="confirmOrder" class="btn" type="submit" name="button">Confirm Order</button>
     </form>
+    <fieldset class="confirmedOrder">
+      <legend id="orderLegend">Thank you <span id="customerName"></span>, your order has been placed!</legend>
+      <p id="message">Feel free to stop by in 30 minutes or we'll call you at <span id="customerNumber"></span> if we don't hear from you for over an hour.</p>
+    </fieldset>
   </div>
 </body>
 </html>

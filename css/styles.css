@@ -42,6 +42,16 @@ fieldset {
   font-size: 18px;
 }
 
+.confirmedOrder {
+  display: none;
+  font-size: 18px;
+  width: 600px;
+}
+
+#message {
+  margin-left: 10px;
+}
+
 #orderLegend {
   text-align: center;
 }
@@ -69,6 +79,11 @@ button {
 }
 
 #userName {
+  width: 250px;
+  margin-left: 10px;
+}
+
+#userNumber {
   width: 250px;
   margin-left: 10px;
 }

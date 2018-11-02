@@ -68,6 +68,20 @@ $(document).ready(function() {
     $("#userPizza").hide();
   });
 
+  $("#userInfo").submit(function(event) {
+    event.preventDefault();
+
+    var userName = $("#userName").val();
+    var userNumber = $("#userNumber").val();
+    $("#customerName").text(userName);
+    $("#customerNumber").text(userNumber);
+
+    $(".confirmedOrder").show();
+    $("#confirmOrder").hide();
+    $(".customerInfo").hide();
+    $("#redo").hide();
+  });
+
   $("#redo").click(function() {
     document.location.reload()
   });

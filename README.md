@@ -6,7 +6,11 @@ Specs:
     - Add checkboxes for toppings
     - Add Selector for medium or large pizza
     - Output total and what the user selected
-    - Add name and number for user to input
+    - CSS fun
+
 ----------
   Bonus
+  - Add user name and number
   - Add sides for user to order
+
+  https://www.jcnypd.com/uploads/images/_GalleryStandardLarge/gallery-home-1200x768.jpg

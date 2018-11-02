@@ -3,46 +3,52 @@
   <head>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/scripts.js"></script>
     <title>Pizza Shop</title>
   </head>
   <body>
-    <form id="userPizza">
+    <div class="jumbotron">
+      <h1 id="header">Tony Youknowme Pizza</h1>
+      <img id="pizzaImg" src="img/pizza.jpg">
+    </div>
+    <div class="container">
+      <form id="userPizza">
+        <fieldset>
+        <legend>Select size:</legend>
+        <div class="input">
+          <input type="radio" id="medium" name="size" value="medium" checked />
+          <label for="medium">Medium</label>
+        </div>
+        <div class="input">
+          <input type="radio" id="large" name="size" value="large"/>
+          <label for="large">Large</label>
+        </div>
+       </fieldset>
+      <br>
       <fieldset>
-      <legend>Select a size</legend>
-      <div>
-        <input type="radio" id="medium" name="size" value="medium" checked />
-        <label for="medium">Medium</label>
+        <legend>Choose your toppings:</legend>
+        <div class="input">
+          <input type="checkbox" id="pepperoni" value="pepperoni" />
+          <label for="pepperoni">Pepperoni</label>
+        </div>
+        <div class="input">
+          <input type="checkbox" id="onion" value="onion" />
+          <label for="onion">Onion</label>
+        </div>
+        <div class="input">
+          <input type="checkbox" id="mushroom" value="mushroom" />
+          <label for="mushroom">Mushroom</label>
+        </div>
+      </fieldset>
+      <button class="btn okay" type="submit" name="button">Confirm Order</button>
+      </form>
+      <div class="output">
+        <p>Size:  <span id="userSize"></span></p>
+        <p>Toppings: <span id="userToppings"></span></p>
+        <p>Your total is $<span id="userTotal"></span></p>
       </div>
-      <div>
-        <input type="radio" id="large" name="size" value="large"/>
-        <label for="large">Large</label>
-      </div>
-     </fieldset>
-    <br>
-    <fieldset>
-      <legend>Choose your toppings:</legend>
-      <div>
-        <input type="checkbox" id="pepperoni" value="pepperoni">
-        <label for="pepperoni">Pepperoni</label>
-      </div>
-      <div>
-        <input type="checkbox" id="onion" value="onion">
-        <label for="onion">Onion</label>
-      </div>
-      <div>
-        <input type="checkbox" id="mushroom" value="mushroom">
-        <label for="mushroom">Mushroom</label>
-      </div>
-    </fieldset>
-    <button class="btn okay" type="submit" name="button">Okay</button>
-    </form>
-    <div class="output">
-      <p>Size:  <span id="userSize"></span></p>
-      <p>Toppings: <span id="userToppings"></span></p>
-      <p>Your total is $<span id="userTotal"></span></p>
     </div>
   </body>
 </html>

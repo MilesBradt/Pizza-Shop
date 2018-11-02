@@ -1,0 +1,38 @@
+body {
+  background-color: #395923;
+}
+
+legend {
+    background-color: #000;
+    color: #F2C3A7;
+    padding: 3px 6px;
+    margin-left: 10px;
+    width: 250px;
+}
+
+fieldset {
+  width: 300px;
+  border: 2px solid black;
+  background-color: #D97236;
+}
+
+.input {
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+.jumbotron {
+  background-color: #395923;
+}
+
+#pizzaImg {
+  display: flex;
+  margin: 0 auto;
+  height: 600px;
+}
+
+#header {
+  text-align: center;
+  color: #F2C3A7;
+  font-family: 'Playfair Display', serif
+}

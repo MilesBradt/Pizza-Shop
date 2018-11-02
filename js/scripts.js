@@ -1,7 +1,6 @@
-function Customer(name, number, total) {
+function Customer(name, number) {
   this.name = name,
-  this.number = number,
-  this.total = total
+  this.number = number
 }
 
 function Pizza(toppings, size, price = 0) {
@@ -28,19 +27,19 @@ Pizza.prototype.determinePrice = function() {
   var newPrice = this.price
   var currentToppings = this.toppings[0]
   if (this.size === "medium") {
-    newPrice += 7
+    newPrice += 6.99
   } else if (this.size === "large") {
-    newPrice += 10
+    newPrice += 10.99
   }
   for (var i = 0; i < currentToppings.length; i++) {
     if (currentToppings[i] === "pepperoni") {
-      newPrice += 1
+      newPrice += 1.50
     }
     else if (currentToppings[i] === "onion") {
-      newPrice += 1
+      newPrice += 1.25
     }
     else if (currentToppings[i] === "mushroom") {
-      newPrice += 2
+      newPrice += 2.00
     }
   }
   return newPrice

@@ -5,8 +5,8 @@ Specs:
   - Add UI:
     - Add checkboxes for toppings
     - Add Selector for medium or large pizza
-    - Add name and number for user to input
     - Output total and what the user selected
+    - Add name and number for user to input
 ----------
   Bonus
   - Add sides for user to order

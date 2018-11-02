@@ -31,6 +31,10 @@
       <fieldset>
         <legend>Choose your toppings:</legend>
         <div class="input">
+          <input type="checkbox" id="nothing" value="none" checked/>
+          <label for="nothing">Just Cheese</label>
+        </div>
+        <div class="input">
           <input type="checkbox" id="pepperoni" value="pepperoni" />
           <label for="pepperoni">Pepperoni (add $1.50)</label>
         </div>
@@ -43,7 +47,7 @@
           <label for="mushroom">Mushroom (add $2.00)</label>
         </div>
       </fieldset>
-      <button class="btn okay" type="submit" name="button">Confirm Order</button>
+      <button class="btn okay" type="submit" name="button">Check Order</button>
     </form>
     <fieldset class="output">
       <legend id="orderLegend">Your Final Order:</legend>
@@ -56,6 +60,23 @@
       </div>
     </fieldset>
     <button id="redo" class="btn" type="button" name="button">Re-do Order</button>
-    </div>
-  </body>
-  </html>
+    <br>
+    <br>
+    <br>
+    <br>
+    <fieldset class="output">
+    <form class="userInfo">
+      <div class="form-group">
+        <label id="name" for="sentence">Name: </label>
+        <input id="userName" class="form-control" type="text">
+      </div>
+      <div class="form-group">
+        <label id="name" for="sentence">Phone Number: </label>
+        <input id="userName" class="form-control" type="text">
+      </div>
+    </fieldset>
+      <button id="confirmOrder" class="btn" type="submit" name="button">Confirm Order</button>
+    </form>
+  </div>
+</body>
+</html>

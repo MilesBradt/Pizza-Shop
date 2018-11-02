@@ -48,8 +48,8 @@ Pizza.prototype.determinePrice = function() {
   return newPrice
 }
 
-var newCustomer = new Customer()
-var newPizza = new Pizza()
+var newCustomer = new Customer();
+var newPizza = new Pizza();
 
 $(document).ready(function() {
   $("#userPizza").submit(function(event) {
@@ -63,6 +63,7 @@ $(document).ready(function() {
     $("ul#userToppings").prepend(newPizza.toppings[0].join(" ") + "</li>");
 
     $(".output").fadeIn(500, "linear");
+    $("#confirmOrder").fadeIn(500, "linear");
     $("#redo").fadeIn(500, "linear");
     $("#userPizza").hide();
   });
@@ -70,5 +71,4 @@ $(document).ready(function() {
   $("#redo").click(function() {
     document.location.reload()
   });
-
 });

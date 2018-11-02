@@ -38,6 +38,10 @@ fieldset {
   background-color: #D97236;
 }
 
+.userInfo {
+  font-size: 18px;
+}
+
 #orderLegend {
   text-align: center;
 }
@@ -61,5 +65,18 @@ button {
 }
 
 #redo {
+  display: none;
+}
+
+#userName {
+  width: 250px;
+  margin-left: 10px;
+}
+
+#name {
+  margin-left: 10px;
+}
+
+#confirmOrder {
   display: none;
 }

@@ -15,11 +15,13 @@ Pizza.prototype.addToppings = function(topping){
 }
 
 Pizza.prototype.determinePrice = function() {
+  var newPrice = this.price
   for (var i = 0; i < this.toppings.length; i++) {
-    if (this.toppings[i] === pepperoni) {
-      return this.price + 1
+    if (this.toppings[i] === "pepperoni") {
+      newPrice += 1;
     }
   }
+  return newPrice;
 }
 
 var newCustomer = new Customer();

@@ -19,13 +19,19 @@ fieldset {
   color: #080D05;
 }
 
-.input {
-  margin-left: 10px;
-  margin-bottom: 5px;
+button {
+  background-color: #F2C3A7;
+  color: #080D05;
+  margin-top: 15px;
 }
 
 .jumbotron {
   background-color: #395923;
+}
+
+.input {
+  margin-left: 10px;
+  margin-bottom: 5px;
 }
 
 .output {
@@ -42,24 +48,19 @@ fieldset {
   font-size: 18px;
 }
 
-.confirmedOrder {
+.customerInfo {
+  margin-top: 100px;
+}
+
+.orderConfirmed {
   display: none;
+  margin-top: 25px;
   font-size: 18px;
   width: 600px;
 }
 
-#message {
-  margin-left: 10px;
-}
-
-#orderLegend {
+.orderLegend {
   text-align: center;
-}
-
-button {
-  background-color: #F2C3A7;
-  color: #080D05;
-  margin-top: 15px;
 }
 
 #pizzaImg {
@@ -72,6 +73,11 @@ button {
   text-align: center;
   color: #F2C3A7;
   font-family: 'Playfair Display', serif
+}
+
+.message {
+  margin-left: 10px;
+  font-weight: bold;
 }
 
 #redo {

@@ -1,86 +1,106 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-  <link href="css/styles.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
-  <script src="js/jquery-3.3.1.js"></script>
-  <script src="js/scripts.js"></script>
-  <title>Pizza Shop</title>
-</head>
-<body>
-  <div class="jumbotron">
-    <h1 id="header">Tony Youknowme Pizza</h1>
-    <img id="pizzaImg" src="img/pizza.jpg">
-  </div>
-  <div class="container">
-    <form id="userPizza">
-      <h2>Place an order?</h2>
-      <fieldset>
-        <legend>Select size:</legend>
-        <div class="input">
-          <input type="radio" id="medium" name="size" value="Medium" checked />
-          <label for="medium">Medium ($7.99)</label>
-        </div>
-        <div class="input">
-          <input type="radio" id="large" name="size" value="Large"/>
-          <label for="large">Large ($10.99)</label>
-        </div>
-      </fieldset>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Pizza Shop</title>
+  </head>
+  <body>
+    <div class="jumbotron">
+      <h1 id="header">Tony Youknowme Pizza</h1>
       <br>
-      <fieldset>
-        <legend>Choose your toppings:</legend>
+      <img id="pizzaImg" src="img/pizza.jpg">
+    </div>
+    <div class="container">
+      <form id="userPizza">
+        <h2>Place an order?</h2>
+        <fieldset>
+          <legend>Select size:</legend>
+          <div class="input">
+            <input type="radio" id="medium" name="size" value="Medium" checked />
+            <label for="medium">Medium ($7.99)</label>
+          </div>
+          <div class="input">
+            <input type="radio" id="large" name="size" value="Large"/>
+            <label for="large">Large ($10.99)</label>
+          </div>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend>Choose your toppings:</legend>
+          <div class="input">
+            <input type="checkbox" id="nothing" value="none" checked/>
+            <label for="nothing">Just Cheese</label>
+          </div>
+          <p class="message">Meat: </p>
+          <div class="input">
+            <input type="checkbox" id="pepperoni" value="pepperoni" />
+            <label for="pepperoni">Pepperoni (add $1.50)</label>
+          </div>
+          <div class="input">
+            <input type="checkbox" id="sausage" value="sausage" />
+            <label for="sausage">Sausage (add $1.50)</label>
+          </div>
+          <p class="message">Veggies: </p>
+          <div class="input">
+            <input type="checkbox" id="onion" value="onion" />
+            <label for="onion">Onion (add $1.25)</label>
+          </div>
+          <div class="input">
+            <input type="checkbox" id="spinach" value="spinach" />
+            <label for="spinach">Spinach (add $1.25)</label>
+          </div>
+          <div class="input">
+            <input type="checkbox" id="peppers" value="peppers" />
+            <label for="peppers">Peppers (add $1.25)</label>
+          </div>
+          <div class="input">
+            <input type="checkbox" id="olives" value="olives" />
+            <label for="olives">Black Olives (add $1.25)</label>
+          </div>
+          <p class="message">Other: </p>
+          <div class="input">
+            <input type="checkbox" id="mushroom" value="mushroom" />
+            <label for="mushroom">Mushroom (add $2.00)</label>
+          </div>
+          <div class="input">
+            <input type="checkbox" id="pineapple" value="pineapple" />
+            <label for="pineapple">Pineapple (add $2.00)</label>
+          </div>
+        </fieldset>
+        <button class="btn okay" type="submit" name="button">Check Order</button>
+      </form>
+      <fieldset class="output">
+        <legend class="orderLegend">Your Final Order:</legend>
         <div class="input">
-          <input type="checkbox" id="nothing" value="none" checked/>
-          <label for="nothing">Just Cheese</label>
-        </div>
-        <div class="input">
-          <input type="checkbox" id="pepperoni" value="pepperoni" />
-          <label for="pepperoni">Pepperoni (add $1.50)</label>
-        </div>
-        <div class="input">
-          <input type="checkbox" id="onion" value="onion" />
-          <label for="onion">Onion (add $1.25)</label>
-        </div>
-        <div class="input">
-          <input type="checkbox" id="mushroom" value="mushroom" />
-          <label for="mushroom">Mushroom (add $2.00)</label>
+          <p>Size:  <span id="userSize"></span></p>
+          <p>Toppings:</p>
+          <ul id="userToppings">
+          </ul>
+          <p>Total: $<span id="userTotal"></span></p>
         </div>
       </fieldset>
-      <button class="btn okay" type="submit" name="button">Check Order</button>
-    </form>
-    <fieldset class="output">
-      <legend id="orderLegend">Your Final Order:</legend>
-      <div class="input">
-        <p>Size:  <span id="userSize"></span></p>
-        <p>Toppings:</p>
-        <ul id="userToppings">
-        </ul>
-        <p>Total: $<span id="userTotal"></span></p>
-      </div>
-    </fieldset>
-    <button id="redo" class="btn" type="button" name="button">Re-do Order</button>
-    <br>
-    <br>
-    <br>
-    <br>
-    <fieldset class="output customerInfo">
-    <form id="userInfo">
-      <div class="form-group">
-        <label id="name" for="sentence">Name: </label>
-        <input id="userName" class="form-control" type="text">
-      </div>
-      <div class="form-group">
-        <label id="name" for="sentence">Phone Number: </label>
-        <input id="userNumber" class="form-control" type="text">
-      </div>
-    </fieldset>
-      <button id="confirmOrder" class="btn" type="submit" name="button">Confirm Order</button>
-    </form>
-    <fieldset class="confirmedOrder">
-      <legend id="orderLegend">Thank you <span id="customerName"></span>, your order has been placed!</legend>
-      <p id="message">Feel free to stop by in 30 minutes or we'll call you at <span id="customerNumber"></span> if we don't hear from you for over an hour.</p>
-    </fieldset>
-  </div>
-</body>
+      <button id="redo" class="btn" type="button" name="button">Re-do Order</button>
+      <fieldset class="output customerInfo">
+      <form id="userInfo">
+        <div class="form-group">
+          <label id="name" for="sentence">Name: </label>
+          <input id="userName" class="form-control" type="text">
+        </div>
+        <div class="form-group">
+          <label id="name" for="sentence">Phone Number: </label>
+          <input id="userNumber" class="form-control" type="text">
+        </div>
+      </fieldset>
+        <button id="confirmOrder" class="btn" type="submit" name="button">Confirm Order</button>
+      </form>
+      <fieldset class="orderConfirmed">
+        <legend class="orderLegend">Thank you <span id="customerName"></span>, your order has been placed!</legend>
+        <p class="message">Feel free to stop by in 30 minutes or we'll call you at <span id="customerNumber"></span> if we don't hear from you for over an hour.</p>
+      </fieldset>
+    </div>
+  </body>
 </html>

@@ -28,7 +28,10 @@ Pizza.prototype.determinePrice = function() {
   }
   var currentToppings = this.toppings[0];
   for (var i = 0; i < currentToppings.length; i++) {
-    if (currentToppings[i] === "pepperoni") {
+    if (currentToppings[i] === "undifined") {
+      newPrice += 0
+    }
+    else if (currentToppings[i] === "pepperoni") {
       newPrice += 1
     }
     else if (currentToppings[i] === "onion") {
@@ -45,5 +48,10 @@ var newCustomer = new Customer();
 var newPizza = new Pizza();
 
 $(document).ready(function() {
-
+  $("#userToppings").submit(function(event) {
+    event.preventDefault();
+    newPizza.addToppings($("input[id='pepperoni']:checked").val() + " " + $("input[id='onion']:checked").val() + " " + $("input[id='mushroom']:checked").val());
+    console.log(newPizza);
+    console.log(newPizza.determinePrice());
+  })
 });

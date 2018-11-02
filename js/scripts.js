@@ -26,7 +26,7 @@ Pizza.prototype.addSize = function(size) {
 
 Pizza.prototype.determinePrice = function() {
   var newPrice = this.price
-  var currentToppings = this.toppings[0];
+  var currentToppings = this.toppings[0]
   if (this.size === "medium") {
     newPrice += 7
   } else if (this.size === "large") {
@@ -46,8 +46,8 @@ Pizza.prototype.determinePrice = function() {
   return newPrice
 }
 
-var newCustomer = new Customer();
-var newPizza = new Pizza();
+var newCustomer = new Customer()
+var newPizza = new Pizza()
 
 $(document).ready(function() {
   $("#userPizza").submit(function(event) {
@@ -57,7 +57,8 @@ $(document).ready(function() {
     console.log(newPizza);
     console.log(newPizza.size);
     console.log(newPizza.determinePrice());
-    $("#total").text(newPizza.determinePrice());
-    $("#toppingsTest").text(newPizza.toppings[0].join(" "));
+    $("#userSize").text(newPizza.size);
+    $("#userTotal").text(newPizza.determinePrice());
+    $("#userToppings").text(newPizza.toppings[0].join(" "));
   })
 });

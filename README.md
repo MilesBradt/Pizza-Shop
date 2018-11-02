@@ -11,7 +11,7 @@ Just a mock webpage using simple object oriented programming to determine price 
 ## Setup/Installation Requirements
 
 * Clone and open index.html
-* View at: (placeholder for gh-pages link)
+* View at: https://milesbradt.github.io/Pizza-Shop/
 
 
 ## Known Bugs

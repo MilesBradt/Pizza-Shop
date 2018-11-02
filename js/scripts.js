@@ -11,7 +11,7 @@ function Pizza(toppings, size, price = 0) {
 }
 
 Pizza.prototype.addToppings = function(topping) {
-  var splitToppings = topping.split(" ");
+  var splitToppings = topping.split(" ")
   this.toppings.push(splitToppings)
 }
 
@@ -26,10 +26,16 @@ Pizza.prototype.determinePrice = function() {
   } else if (this.size === "large") {
     newPrice += 10
   }
-
-  for (var i = 0; i < this.toppings.length; i++) {
-    if (this.toppings[i] === "pepperoni") {
+  var currentToppings = this.toppings[0];
+  for (var i = 0; i < currentToppings.length; i++) {
+    if (currentToppings[i] === "pepperoni") {
       newPrice += 1
+    }
+    else if (currentToppings[i] === "onion") {
+      newPrice += 1
+    }
+    else if (currentToppings[i] === "mushroom") {
+      newPrice += 2
     }
   }
   return newPrice

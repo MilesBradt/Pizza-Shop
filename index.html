@@ -14,15 +14,16 @@
       <img id="pizzaImg" src="img/pizza.jpg">
     </div>
     <div class="container">
+      <h2>Place an order?</h2>
       <form id="userPizza">
         <fieldset>
         <legend>Select size:</legend>
         <div class="input">
-          <input type="radio" id="medium" name="size" value="medium" checked />
+          <input type="radio" id="medium" name="size" value="Medium" checked />
           <label for="medium">Medium</label>
         </div>
         <div class="input">
-          <input type="radio" id="large" name="size" value="large"/>
+          <input type="radio" id="large" name="size" value="Large"/>
           <label for="large">Large</label>
         </div>
        </fieldset>
@@ -46,7 +47,11 @@
       </form>
       <div class="output">
         <p>Size:  <span id="userSize"></span></p>
-        <p>Toppings: <span id="userToppings"></span></p>
+        <p>Toppings:</p>
+        <ul id="userToppings">
+
+
+        </ul>
         <p>Your total is $<span id="userTotal"></span></p>
       </div>
     </div>

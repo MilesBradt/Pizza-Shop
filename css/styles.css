@@ -1,5 +1,7 @@
 body {
   background-color: #395923;
+  color: #F2C3A7;
+  padding-bottom: 25%;
 }
 
 legend {
@@ -14,6 +16,7 @@ fieldset {
   width: 300px;
   border: 2px solid black;
   background-color: #D97236;
+  color: #080D05;
 }
 
 .input {
@@ -23,6 +26,16 @@ fieldset {
 
 .jumbotron {
   background-color: #395923;
+}
+
+.output {
+  display: none;
+}
+
+button {
+  background-color: #F2C3A7;
+  color: #080D05;
+  margin-top: 15px;
 }
 
 #pizzaImg {
